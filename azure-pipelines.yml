@@ -18,7 +18,7 @@ steps:
 - task: NuGetToolInstaller@1
 
 - task: NuGetCommand@2
-  inputs:
+  inputs:\
     restoreSolution: '$(solution)'
 
 - task: VSBuild@1
@@ -32,3 +32,4 @@ steps:
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+    batchingBasedOnAgentsOption
